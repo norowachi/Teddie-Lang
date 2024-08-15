@@ -54,7 +54,7 @@ export default {
         roleplay: {
             name: 'roleplay',
             description: 'Use an action by yourself or on a user!',
-            // user, 0 = no user, 1 = optional, 2 = required
+            // user, 0 = no user, 1 = optional, 2 = required (for user2)
             options: {
                 user: {
                     name: 'user',
