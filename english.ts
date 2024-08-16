@@ -23,7 +23,8 @@ export default {
         flip: {
             name: 'flip',
             description: 'Flip a coin and see the result(s)!',
-            response: (head: number, tails: number) => (head && tails ? `You got **${head}** head and **${tails}** tails out of **${head + tails}** flip(s)!` : head ? `You got **${head}** head!` : `You got **${tails}** tails!`),
+            response: (head: number, tails: number) =>
+                head && tails ? `You got **${head}** head and **${tails}** tails out of **${head + tails}** flip(s)!` : head ? `You got **${head}** head!` : `You got **${tails}** tails!`,
             options: {
                 times: {
                     name: 'times',
@@ -475,7 +476,12 @@ export default {
             description: 'Claim your daily reward!',
             responses: {
                 alreadyClaimed: 'You have already claimed your daily reward today!',
-                success: (currency: number, streak: number, weekend?: number) => [`You have claimed **${currency}** ${emojis.currency} as your daily reward with a **${streak}** ${emojis.fire} day streak!`, weekend ? `+ **${weekend}** ${emojis.currency} as a weekend bonus!\n` : '', `Totaling: **${currency + (weekend ?? 0)}** ${emojis.currency}`].join('\n'),
+                success: (currency: number, streak: number, weekend?: number) =>
+                    [
+                        `You have claimed **${currency}** ${emojis.currency} as your daily reward with a **${streak}** ${emojis.fire} day streak!`,
+                        weekend ? `+ **${weekend}** ${emojis.currency} as a weekend bonus!\n` : '',
+                        `Totaling: **${currency + (weekend ?? 0)}** ${emojis.currency}`,
+                    ].join('\n'),
             },
         },
         balance: {
