@@ -33,6 +33,19 @@ export default {
                 },
             },
         },
+        get tictactoe() {
+            return {
+                name: 'tic-tac-toe',
+                description: 'Play a game of tic-tac-toe!',
+                options: this.rps.options,
+                responses: {
+                    win: this.rps.response.win,
+                    tie: this.rps.response.tie,
+                    timeout: this.rps.response.timeout,
+                    notYourTurn: "It's not your turn!",
+                },
+            };
+        },
         rps: {
             name: 'rps',
             description: 'Play rock, paper, scissors with the bot or a friend!',
@@ -52,7 +65,7 @@ export default {
                 win: (userId: string) => `<@${userId}> won`,
                 lose: (userId: string) => `<@${userId}> lost!`,
                 tie: "It's a tie!",
-                timeout: `A user took too long to choose!`,
+                timeout: (userId: string) => `<@${userId}> took too long to choose!`,
             },
             choices: {
                 rock: 'rock',
