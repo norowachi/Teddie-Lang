@@ -394,13 +394,8 @@ export default {
                         ``,
                         `# Bot's Cheatsheet`,
                         `**Query**: \`query:<query>\`, search for everything with the query, **R34**'s Cheatsheet ALL applies here`,
-                        `**And**: \`and:<query>\`, functions as **R34**'s \`and\` search, which is the standard`,
                         `**Or**: \`or:<query>\`, functions as **R34**'s \`or\` search, just making it easier for the user`,
                         `**Not**: \`not:<query>\`, functions as **R34**'s \`not/-\` search, just adding (-) before each tag`,
-                        ``,
-                        `**Wild**: \`wild:<query>\`, functions as **R34**'s wild, but adds (\\*) between each character`,
-                        `**WildAll**: \`wild-all:<boolean>\`, make the whole query wild, that is adding (\\*) between each character`,
-                        `***\`NOTE\`***: wild'ing may return incorrect results`,
                     ].join('\n'),
                 },
                 search: {
@@ -410,10 +405,6 @@ export default {
                         name: 'query',
                         description: 'The query to search for by tags',
                     },
-                    and: {
-                        name: 'and',
-                        description: 'Search for posts that have all included tags.',
-                    },
                     or: {
                         name: 'or',
                         description: 'Search for posts that have one of the included tags.',
@@ -421,14 +412,6 @@ export default {
                     not: {
                         name: 'not',
                         description: 'Search for posts that does not have the included tags.',
-                    },
-                    wildcard: {
-                        name: 'wild',
-                        description: 'Search for posts wildly with the included tag',
-                    },
-                    wildall: {
-                        name: 'wild-all',
-                        description: 'Toggle whether to search for posts with all tags wildly or not',
                     },
                 },
             },
