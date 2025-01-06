@@ -466,6 +466,20 @@ export default {
                     invalid: 'Invalid language selected!',
                 },
             },
+            custombot: {
+                name: 'custombot',
+                description: 'Change the custom bot settings',
+                embed: {
+                    title: 'Custom Bot',
+                    description: (MainBotId: string) => `Make your own custom bot create and reply to slash commands instead of <@${MainBotId}>!`,
+                },
+                add: 'Add Bot',
+                remove: 'Remove Bot',
+                token: "Bot's Token",
+                success: (botId: string) => `Successfully added <@${botId}> as a custom bot!`,
+                fail: 'Failed to add custom bot!',
+                deleted: 'Successfully removed custom bot from the database.',
+            },
         },
         daily: {
             name: 'daily',
