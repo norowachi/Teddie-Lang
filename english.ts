@@ -506,6 +506,17 @@ export default {
                 },
             },
         },
+        purge: {
+            purgeAfter: {
+                name: 'Purge After',
+                confirmation: (msgLink: string) => `Are you sure you want to delete all messages after this message (${msgLink})?\nThis confirmation only pops up once!`,
+            },
+            noPermission: "I don't have permission to manage messages in this channel!",
+            textOnly: 'This command only works in text channels!',
+            tooOld: 'The messages are too old to purge!',
+            success: (numOfPurges: number) => `Successfully purged ${numOfPurges} messages!`,
+            noMsgs: 'No messages to delete! (require 2+ messages)',
+        },
     },
     interactions: {
         errors: {
