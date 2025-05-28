@@ -455,6 +455,10 @@ export default {
             exp: {
                 name: 'exp',
                 description: 'Change the EXP system settings',
+                options: {
+                    enable: { name: 'enable', description: 'Enable EXP System' },
+                    disable: { name: 'disable', description: 'Disable EXP System' },
+                },
             },
             lang: {
                 name: 'language',
