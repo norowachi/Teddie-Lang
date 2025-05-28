@@ -459,6 +459,11 @@ export default {
                     enable: { name: 'enable', description: 'Enable EXP System' },
                     disable: { name: 'disable', description: 'Disable EXP System' },
                 },
+                enabled: 'EXP System has been enabled!',
+                disabled: 'EXP System has been disabled!',
+                alreadyEnabled: 'EXP System is already enabled!',
+                alreadyDisabled: 'EXP System is already disabled!',
+                invalidOption: 'Invalid option selected! Please choose either `enable` or `disable`.',
             },
             lang: {
                 name: 'language',
