@@ -3,6 +3,37 @@ import { LangRP } from '@/utils/interfaces/roleplay.js';
 
 export default {
     commands: {
+        hide: {
+            name: 'hide',
+            description: 'Hide or unhide a user from the leaderboard',
+            options: {
+                user: {
+                    name: 'user',
+                    description: 'The user to hide/unhide',
+                },
+                value: {
+                    name: 'value',
+                    description: 'Whether to hide or unhide the user (default is true)',
+                    choices: [
+                        { name: 'Hide', value: 'true' },
+                        { name: 'Unhide', value: 'false' },
+                    ],
+                },
+            },
+            response: (userId: string, hidden: boolean) => `User <@${userId}> has been ${hidden ? 'hidden' : 'unhidden'}!`,
+        },
+        rank: {
+            name: 'rank',
+            description: "Get a user's rank card",
+            noExp: 'You have no XP in this server.',
+            viewLeaderboard: 'View Leaderboard',
+            options: {
+                user: {
+                    name: 'user',
+                    description: 'The user to get the rank card for',
+                },
+            },
+        },
         roll: {
             name: 'roll',
             description: 'Roll a random number',
@@ -535,6 +566,7 @@ export default {
             noDMs: 'This interaction is not available in DMs!',
             guildOnly: 'This interaction is only available in guilds!',
             noDB: 'Could not fetch data from the database!',
+            featureNotEnabled: 'This feature is not enabled in this server!',
         },
         intTimeout: 'Interaction timed out',
         page: (page: number, pages: number) => `Page ${page} of ${pages}`,
