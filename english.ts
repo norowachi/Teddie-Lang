@@ -3,6 +3,15 @@ import { LangRP } from '@/utils/interfaces/roleplay.js';
 
 export default {
     commands: {
+        custombot: {
+            sync: {
+                name: 'sync',
+                description: 'Sync the custom bot commands',
+                success: 'Successfully synced custom bot commands!',
+                fail: 'Failed to sync custom bot commands!',
+                ratelimit: 'You can only sync the custom bot commands once every 24 hours!',
+            },
+        },
         hide: {
             name: 'hide',
             description: 'Hide or unhide a user from the leaderboard',
